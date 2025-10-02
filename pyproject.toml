@@ -1,0 +1,22 @@
+[project]
+name = "earthquake"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+earthquake = "earthquake.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["earthquake"] 
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
